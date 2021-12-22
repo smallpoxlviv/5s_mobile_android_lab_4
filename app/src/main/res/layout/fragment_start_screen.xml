@@ -14,7 +14,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/activity_main__toolbar"
-        app:title="Start Screen"
+        app:title="@string/start_screen_text"
         app:titleTextColor="@color/app_text_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

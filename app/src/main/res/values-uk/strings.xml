@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">mobile_android</string>
+    <string name="sign_in">Вхід</string>
+    <string name="password">Пароль</string>
+    <string name="email">Емейл</string>
+    <string name="sign_up">Реєстрація</string>
+
+    <string name="next">Наступний</string>
+    <string name="previous">Попередній</string>
+
+    <string name="confirm_password">Підтвердіть пароль</string>
+    <string name="name">Ім\'я</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="start_screen_text">Основна сторінка</string>
+    <string name="sign_out_button_text">Вихід з аккаунта</string>
+
+    <string name="set_new_data">Введіть нові дані</string>
+    <string name="new_email">Новий емейл</string>
+    <string name="new_name">Нове ім\'я</string>
+    <string name="choose_language">Виберіть мову:</string>
+    <string name="my_profile">Мій профіль</string>
+
+    <string-array name="Languages">
+        <item>Англійська</item>
+        <item>Українська</item>
+    </string-array>
+
+
+
+
+<!--    <string name="title_activity_sign_up">SignUpActivity</string>-->
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

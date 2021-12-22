@@ -2,6 +2,7 @@ package com.example.mobile_android.presentation
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +18,7 @@ import com.example.mobile_android.presentation.start.StartScreenFragment
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import timber.log.Timber
-
+import java.util.*
 
 private const val LANGUAGE_NAME = "language"
 private const val USER_NAME = "name"
@@ -68,6 +69,13 @@ class MyProfileFragment : Fragment() {
                     }
                 }
             }
+
+            if (sharedPreferences?.getString(LANGUAGE_NAME, "English") == "Ukrainian") {
+                changeLanguage("uk")
+            } else if (sharedPreferences?.getString(LANGUAGE_NAME, "English") == "Англійська") {
+                changeLanguage("en")
+            }
+
             (activity as StartScreenActivity).showFragment(StartScreenFragment.newInstance())
         }
     }
@@ -80,7 +88,7 @@ class MyProfileFragment : Fragment() {
 
     private fun setViewsValue(view: View) {
         emailInput?.setText(auth.currentUser?.email)
-        nameInput?.setText(sharedPreferences?.getString(USER_NAME, "rara"))
+        nameInput?.setText(sharedPreferences?.getString(USER_NAME, "Default"))
 
         val spinner: Spinner = view.findViewById(R.id.myprofile__dropdown)
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -93,9 +101,28 @@ class MyProfileFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
-            val position: Int = adapter.getPosition(sharedPreferences?.getString(LANGUAGE_NAME, "English"))
-            spinner.setSelection(position)
+
+            if (sharedPreferences?.getString(LANGUAGE_NAME, "Українська") == "English" ||
+                sharedPreferences?.getString(LANGUAGE_NAME, "Українська") == "Англійська"
+            ) {
+                spinner.setSelection(0)
+            } else {
+                spinner.setSelection(1)
+            }
+//            val position: Int = adapter.getPosition(sharedPreferences?.getString(LANGUAGE_NAME, "Українська"))
+//            spinner.setSelection(position)
         }
+    }
+
+    private fun changeLanguage(lang: String) {
+        Locale.setDefault(Locale(lang))
+        val config = Configuration()
+        config.locale = Locale(lang)
+        activity?.resources?.updateConfiguration(
+            config,
+            activity?.resources?.displayMetrics
+        )
+        activity?.recreate()
     }
 
     companion object {
