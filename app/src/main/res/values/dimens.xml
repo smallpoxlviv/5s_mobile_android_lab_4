@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_title_size">25sp</dimen>
+    <dimen name="big_margin">60dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_elevation">8dp</dimen>
+    <dimen name="small_corner_radius">6dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+</resources>

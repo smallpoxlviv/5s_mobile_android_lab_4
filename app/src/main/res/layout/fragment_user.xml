@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_user__toolbar"
+        app:title="set user name"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:titleTextColor="@color/app_text_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_user_swiperefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/big_margin">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/medium_margin">
+
+        <ImageView
+            android:id="@+id/fragment_user__image"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:maxWidth="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <TextView
+            android:id="@+id/fragment_user__firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <TextView
+            android:id="@+id/fragment_user__lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
