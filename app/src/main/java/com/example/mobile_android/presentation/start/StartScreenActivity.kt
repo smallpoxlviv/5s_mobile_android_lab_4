@@ -1,12 +1,10 @@
 package com.example.mobile_android.presentation.start
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mobile_android.R
-import com.example.mobile_android.presentation.SettingsActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class StartScreenActivity : AppCompatActivity() {
@@ -38,8 +36,7 @@ class StartScreenActivity : AppCompatActivity() {
             .commit()
     }
 
-    fun showSettingsActivity() {
-        startActivity(Intent(this, SettingsActivity::class.java))
-    }
-
+//    fun showMyProfileActivity() {
+//        startActivity(Intent(this, MyProfileActivity::class.java))
+//    }
 }

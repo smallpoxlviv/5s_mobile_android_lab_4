@@ -20,4 +20,9 @@
     <string name="start_screen_text">Start Screen</string>
     <string name="sign_out_button_text">Sign Out</string>
 
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Ukrainian</item>
+    </string-array>
+
 </resources>

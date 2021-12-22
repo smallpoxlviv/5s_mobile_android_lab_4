@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MyProfileFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_my_profile__toolbar"
+        app:title="My Profile"
+        app:titleTextColor="@color/app_text_color"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/myprofile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set new data"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main__left_guideline_input"
+        app:layout_constraintRight_toRightOf="@+id/activity_main__right_guideline_input"
+        app:layout_constraintBottom_toTopOf="@id/myprofile__email_layout"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/myprofile__email_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="New email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main__left_guideline_input"
+        app:layout_constraintRight_toRightOf="@+id/activity_main__right_guideline_input"
+        app:layout_constraintBottom_toTopOf="@id/myprofile__name_layout"
+        app:layout_constraintVertical_chainStyle="packed">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/myprofile__email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/myprofile__name_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="New name"
+        app:layout_constraintTop_toBottomOf="@id/myprofile__email_layout"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main__left_guideline_input"
+        app:layout_constraintRight_toRightOf="@+id/activity_main__right_guideline_input"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/myprofile__name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/myprofile_choose_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose language:"
+        android:textSize="14dp"
+        android:layout_marginBottom="20px"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main__left_guideline_input"
+        app:layout_constraintRight_toRightOf="@+id/activity_main__right_guideline_input"
+        app:layout_constraintBottom_toTopOf="@id/myprofile__dropdown"
+        app:layout_constraintTop_toBottomOf="@id/myprofile__name_layout"/>
+
+
+    <Spinner
+        android:id="@+id/myprofile__dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="160dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+
+
+        app:layout_constraintTop_toBottomOf="@id/myprofile_choose_language"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main__left_guideline_input"
+        app:layout_constraintRight_toRightOf="@+id/activity_main__right_guideline_input" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__left_guideline_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__right_guideline_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__left_guideline_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="80dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__right_guideline_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="80dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
